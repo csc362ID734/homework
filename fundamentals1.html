@@ -1,0 +1,32 @@
+<!-- fundamentals1.html -->
+
+<body>
+  <svg = id="chart" width="600" height="300"></svg>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script>
+
+    const factors = []
+
+    function factor(n) {
+      for(let i = 1; i < n; i++){
+        if( n % i == 0 ){
+          factors.push(i)
+        }
+      }
+    }
+
+    factor(48)
+
+    d3.select("#chart")
+      .selectAll("circle")
+      .data(factors)
+      .enter()
+      .append("circle")
+        .attr("r", d => d)
+        .attr("cx", d => d*10)
+        .attr("cy", 150)
+        .style("fill", "white")
+        .style("stroke", "teal")
+
+  </script>
+</body>
