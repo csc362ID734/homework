@@ -1,5 +1,5 @@
 <!--
-Sarah Hancock and Izzy Moody
+NIOR guide and practice with selecting and appending
 -->
 
 <body>
@@ -14,29 +14,32 @@ Sarah Hancock and Izzy Moody
 
   <style>
 
-    .yellow {
-        color: #FF1244;
-        background-color: #A7FEA2;
-        border: 3px #FF1244;
+    .teal {
+        color: #D6EAF8;
+        background-color: teal;
+        border: 3px #D6EAF8;
         border-style: dotted dashed solid double;
     }
 
-    .magenta {
+    .pink {
         color: #360A9A;
         background-color: #F1ACFF;
         border: 3px solid #360A9A;
     }
-    .green {
+
+    .light_blue {
         color: black;
         background-color: #A1F2FF;
         border: 3px dashed black;
     }
-    .purple {
+
+    .magenta {
         color: white;
         background-color: #FF1D98;
         border: 3px double white;
     }
-    .blue {
+
+    .purple {
         color: #FFD9F8;
         background-color: #492DFF;
         border: 3px dotted #FFD9F8;
@@ -46,13 +49,15 @@ Sarah Hancock and Izzy Moody
 
   <script>
 
+    //Header
     d3.select("#header")
-      .classed("yellow", true)
+      .classed("teal", true)
       .append("h1")
       .text("NOIR Guide");
 
+    //Nominal
     d3.select("#nominal")
-      .classed("magenta", true)
+      .classed("pink", true)
       .append("h2")
       .text("Nominal");
 
@@ -60,8 +65,9 @@ Sarah Hancock and Izzy Moody
       .insert("p")
       .text("Nominal data typically relies on labels, names, or categories. Examples include hair color, college major, gender, etc.");
 
+    //Ordinal
     d3.select("#ordinal")
-      .classed("green", true)
+      .classed("light_blue", true)
       .append("h2")
       .text("Ordinal");
 
@@ -69,8 +75,9 @@ Sarah Hancock and Izzy Moody
       .insert("p")
       .text("Ordinal data typically considers things that can be ordered. Examples include Likert scale, education level, etc.")
 
+    //Interval
     d3.select("#interval")
-      .classed("purple", true)
+      .classed("magenta", true)
       .append("h2")
       .text("Interval");
 
@@ -78,8 +85,9 @@ Sarah Hancock and Izzy Moody
       .insert("p")
       .text("Interval data deals with real numbers on a numeric scale. The numbers are ordered and there is an exact difference of things. There is no true zero. Examples include temperature, time, etc. ")
 
+    //Ratio
     d3.select("#ratio")
-      .classed("blue", true)
+      .classed("purple", true)
       .append("h2")
       .text("Ratio");
 
